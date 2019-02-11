@@ -25,17 +25,6 @@ public class KafkaProducerConfig {
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        configProps.put(ProducerConfig.CLIENT_ID_CONFIG, "1");
-        configProps.put(ProducerConfig.CLIENT_ID_CONFIG, "1");
-
-//        configProps.put("acks", "all");
-//        configProps.put("retries", 0);
-//        configProps.put("batch.size", 16384);
-//        configProps.put("linger.ms", 1);
-//        configProps.put("buffer.memory", 33554432);
-//
-//
-//        configProps.put(ProducerConfig.RECONNECT_BACKOFF_MS_CONFIG, "10000");
 
         return new DefaultKafkaProducerFactory<>(configProps);
     }
