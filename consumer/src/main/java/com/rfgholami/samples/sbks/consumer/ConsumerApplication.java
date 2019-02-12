@@ -9,6 +9,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 public class ConsumerApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(ConsumerApplication.class, args);
     }
 

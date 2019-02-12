@@ -13,7 +13,7 @@ import java.util.Map;
 @Configuration
 public class KafkaTopicConfig {
 
-    @Value(value = "${kafka.bootstrapAddress}")
+    @Value("${bootstrapAddress}")
     private String bootstrapAddress;
 
     @Value(value = "${message.topic.name}")
