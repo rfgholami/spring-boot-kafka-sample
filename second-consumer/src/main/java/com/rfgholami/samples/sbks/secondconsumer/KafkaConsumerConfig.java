@@ -1,4 +1,4 @@
-package com.rfgholami.samples.sbks.consumer;
+package com.rfgholami.samples.sbks.secondconsumer;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -30,9 +30,9 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String> gr1KafkaListenerContainerFactory() {
+    public ConcurrentKafkaListenerContainerFactory<String, String> gr2KafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(consumerFactory("gr1"));
+        factory.setConsumerFactory(consumerFactory("gr2"));
         return factory;
     }
 

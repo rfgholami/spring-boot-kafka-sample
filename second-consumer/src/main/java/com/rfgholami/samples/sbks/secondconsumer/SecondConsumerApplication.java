@@ -1,4 +1,4 @@
-package com.rfgholami.samples.sbks.consumer;
+package com.rfgholami.samples.sbks.secondconsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.annotation.KafkaListener;
 
 @SpringBootApplication
-public class ConsumerApplication {
+public class SecondConsumerApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(SecondConsumerApplication.class, args);
     }
 
     @Bean
@@ -21,10 +21,11 @@ public class ConsumerApplication {
     public static class MessageListener {
 
 
-        @KafkaListener(topics = "${message.topic.name}", groupId = "gr1", containerFactory = "gr1KafkaListenerContainerFactory")
+        @KafkaListener(topics = "${message.topic.name}", groupId = "gr2", containerFactory = "gr2KafkaListenerContainerFactory")
         public void listenGroupFoo(String message) {
-            System.out.println("Received Message in group 1: " + message);
+            System.out.println("Received Messasge in group 2: " + message);
         }
+
 
     }
 

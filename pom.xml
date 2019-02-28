@@ -24,6 +24,7 @@
 
   <modules>
     <module>consumer</module>
+    <module>second-consumer</module>
     <module>producer</module>
   </modules>
 

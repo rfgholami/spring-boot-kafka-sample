@@ -1,4 +1,4 @@
-package com.rfgholami.samples.sbks.consumer;
+package com.rfgholami.samples.sbks.secondconsumer;
 
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -20,6 +20,7 @@ public class KafkaTopicConfig {
     private String topicName;
 
 
+
     @Bean
     public KafkaAdmin kafkaAdmin() {
         Map<String, Object> configs = new HashMap<>();
@@ -27,10 +28,5 @@ public class KafkaTopicConfig {
 
         return new KafkaAdmin(configs);
     }
-
-/*    @Bean
-    public NewTopic topic() {
-        return new NewTopic(topicName, 1, (short) 1);
-    }*/
 
 }
